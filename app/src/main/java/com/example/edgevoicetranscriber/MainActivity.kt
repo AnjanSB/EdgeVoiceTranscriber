@@ -37,9 +37,7 @@ class MainActivity : AppCompatActivity() {
         btn = findViewById(R.id.btnRecord)
         tvTrans = findViewById(R.id.tvTranscript)
         tvTransl = findViewById(R.id.tvTranslation)
-        btn.setOnClickListener {
-            if (!isRec) startRec() else stopRec()
-        }
+        btn.setOnClickListener { if (!isRec) startRec() else stopRec() }
         thread { prepareModel() }
     }
 
